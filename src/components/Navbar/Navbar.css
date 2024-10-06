@@ -1,0 +1,50 @@
+.custom-blue {
+  color: #0056b3 !important; /* Bleu foncé par défaut */
+}
+
+.custom-blue:hover {
+  color: rgb(105, 133, 235) !important; /* Bleu clair au survol */
+}
+
+.navbar-logo {
+  height: 40px; /* Ajustez la hauteur de l'image selon vos besoins */
+  width: auto; /* Maintient les proportions de l'image */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand span {
+  font-size: 1.5rem; /* Ajustez la taille de la police si nécessaire */
+  font-weight: bold; /* Pour un texte en gras */
+  color: #0056b3; /* Couleur du texte, ajustez si nécessaire */
+  text-transform: uppercase; /* Met le texte en majuscules */
+  letter-spacing: 1px; /* Augmente l'espacement entre les lettres */
+  font-family: 'Roboto', sans-serif; /* Change la police de caractères */
+  margin-left: 20px; /* Ajoute de l'espace entre l'image et le texte */
+  transition: color 0.3s ease, transform 0.3s ease; /* Ajoute une transition fluide pour les effets */
+}
+
+.navbar-brand span:hover {
+  color: #003d7a; /* Couleur au survol, ajustez selon vos préférences */
+  transform: scale(1.1); /* Agrandit légèrement le texte au survol */
+}
+
+.navbar-nav {
+  margin-left: auto; /* Aligne les éléments à droite */
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: flex-end; /* Aligne les éléments de la navbar à droite */
+}
+
+/* Ajout d'une ombre au conteneur de la navbar */
+.navbar .container-fluid {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère autour du conteneur */
+  border-radius: 8px; /* Coins arrondis */
+  padding: 10px 20px; /* Ajoute du padding pour plus de visibilité */
+  background-color: rgb(248, 250, 254);
+}

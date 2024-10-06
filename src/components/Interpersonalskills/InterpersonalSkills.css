@@ -1,0 +1,97 @@
+/* src/components/InterpersonalSkills.css */
+
+/* Définir une animation d'entrée similaire à fadeInUp */
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .interpersonal-skills {
+    margin-left: 150px; /* Alignement à gauche de la section */
+    background-color: #ffffff;
+    opacity: 0; /* Masquer la section par défaut */
+    transform: translateY(20px); /* Déplacer la section vers le bas par défaut */
+  }
+  
+  .interpersonal-skills.fadeInUp {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .skills-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: rgb(58, 97, 176);
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap; /* Permet d'afficher plusieurs compétences sur plusieurs lignes */
+    gap: 10px; /* Réduire l'espacement entre les compétences */
+    justify-content: space-between; /* Assure que les compétences soient espacées uniformément */
+  }
+  
+  .skill-card {
+    display: flex;
+    flex-direction: column; /* Afficher les éléments de la carte verticalement */
+    justify-content: space-between; /* Espace entre l'icône et la description */
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px; /* Réduire un peu le padding */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Légère ombre pour l'effet visuel */
+    width: calc(33.33% - 10px); /* Trois compétences par ligne */
+    box-sizing: border-box; /* S'assurer que le padding est pris en compte dans la largeur */
+    text-align: center;
+    margin: 10px 0; /* Espacement entre les lignes */
+    flex:1;
+    margin-right: 100px; /* Ajouter l'espacement à droite */
+  }
+  
+  .skill-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 8px; /* Espacement réduit sous le titre */
+  }
+  
+  .skill-icon {
+    width: 150px; /* Taille réduite de l'icône */
+    height: 150px;
+    margin-top: auto; /* Place l'icône en bas de la carte */
+  }
+  
+  .skills-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: rgb(58, 97, 176);
+    position: relative;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .skills-title::before,
+  .skills-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    height: 3px;
+    background-color: rgb(58, 97, 176);
+  }
+  
+  .skills-title::before {
+    left: -100px;
+    width: 80px; /* Longueur de la ligne gauche */
+  }
+  
+  .skills-title::after {
+    right: -970px;
+    width: 950px; /* Longueur de la ligne droite, plus longue que la gauche */
+  }
+  

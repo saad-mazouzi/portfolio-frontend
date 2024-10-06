@@ -1,0 +1,98 @@
+/* TechnicalSkills.css */
+
+/* Définir une animation d'entrée */
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .technical-skills {
+    margin-left: 150px; /* Alignement à gauche de la section */
+    background-color: #ffffff;
+    opacity: 0; /* Masquer la section par défaut */
+    transform: translateY(20px); /* Déplacer la section vers le bas par défaut */
+  }
+  
+  .technical-skills.fadeInUp {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .technical-skills-title {
+    font-size: 2rem;
+    margin-bottom: 40px; /* Ajusté pour correspondre à la hauteur du titre */
+    color: rgb(58, 97, 176); /* Couleur du titre */
+    text-align: left; /* Aligner le titre à gauche */
+  }
+  
+  .technical-skills-container {
+    display: flex;
+    flex-direction: column; /* Dispose les éléments en colonne pour les séparer */
+  }
+  
+  .technical-skill-item {
+    display: flex;
+    align-items: center; /* Aligne l'icône et le texte verticalement */
+    margin-bottom: 40px; /* Espacement entre les compétences */
+    padding: 20px; /* Espacement interne pour chaque item */
+    justify-content: space-between; /* Ajoute de l'espace entre le texte et l'icône */
+  }
+  
+  .technical-skill-details {
+    flex: 1; /* Permet à l'élément de prendre tout l'espace disponible */
+    margin-right: 20px; /* Espacement à droite du texte avant l'icône */
+  }
+  
+  .technical-skill-icon {
+    width: 500px; /* Largeur de l'icône */
+    height: 100px; /* Hauteur de l'icône */
+    margin-right: 150px;
+  }
+  
+  .technical-skill-title {
+    font-size: 1.8rem; /* Taille de la police du titre de la compétence */
+    margin: 0 0 10px; /* Marge inférieure pour l'espacement */
+    color: #333; /* Couleur du titre */
+  }
+  
+  .technical-skill-description {
+    margin: 0; /* Supprime les marges par défaut */
+    font-size: 1rem; /* Taille de la police de la description */
+    color: #000000; /* Couleur de la description */
+  }
+
+  .technical-skills-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: rgb(58, 97, 176);
+    position: relative;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .technical-skills-title::before,
+  .technical-skills-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    height: 3px;
+    background-color: rgb(58, 97, 176);
+  }
+  
+  .technical-skills-title::before {
+    left: -100px;
+    width: 80px; /* Longueur de la ligne gauche */
+  }
+  
+  .technical-skills-title::after {
+    right: -970px;
+    width: 950px; /* Longueur de la ligne droite, plus longue que la gauche */
+  }
+  

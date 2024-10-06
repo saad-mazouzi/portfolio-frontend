@@ -1,0 +1,58 @@
+/* styles.css */
+
+/* Conteneur principal */
+.contact-info {
+    background-color: rgb(248, 250, 254);
+    padding: 40px; /* Espace autour du contenu */
+    display: flex;
+    flex-direction: column; /* Affichage en colonne */
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center; /* Centre les éléments verticalement */
+    text-align: center; /* Centre le texte */
+    margin-top: 40px; /* Espace en haut pour séparer des autres sections */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Style du titre */
+.contact-info h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px; /* Taille de police du titre */
+    font-weight: bold; /* Titre en gras */
+    margin-bottom: 20px; /* Espace sous le titre */
+    color: #333; /* Couleur du texte */
+}
+
+/* Style des paragraphes */
+.contact-info p {
+    font-family: 'Arial', sans-serif;
+    margin: 10px 0; /* Espace autour des paragraphes */
+    font-size: 18px; /* Taille de police des paragraphes */
+    color: #555; /* Couleur du texte */
+}
+
+/* Style des liens */
+.contact-info a {
+    color: #007bff; /* Couleur des liens */
+    text-decoration: none; /* Pas de soulignement */
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Souligner le lien au survol */
+}
+
+/* styles.css */
+
+/* Ajout de style pour les icônes */
+.contact-info p {
+    display: flex; /* Affichage flex pour aligner les icônes et le texte */
+    align-items: center; /* Centre verticalement les éléments */
+    margin: 10px 0; /* Espace autour des paragraphes */
+    font-size: 18px; /* Taille de police des paragraphes */
+    color: #555; /* Couleur du texte */
+}
+
+.contact-info p svg {
+    margin-right: 10px; /* Espace entre l'icône et le texte */
+    color: #007bff; /* Couleur des icônes */
+}

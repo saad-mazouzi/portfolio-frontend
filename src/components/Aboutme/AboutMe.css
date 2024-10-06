@@ -1,0 +1,39 @@
+/* src/components/AboutMe.css */
+.about-me {
+  padding: 60px 0; /* Espacement vertical pour la section */
+  background-color: #ffffff; /* Couleur de fond légère */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Espacement entre l'image et le texte */
+}
+
+.about-me-image {
+  width: 40%; /* Ajustez la largeur de l'image selon vos besoins */
+  height: auto; /* Maintient les proportions de l'image */
+  margin-right: 20px; /* Espacement entre l'image et le texte */
+}
+
+.about-me-text {
+  width: 55%; /* Ajustez la largeur du texte selon vos besoins */
+}
+
+.about-me h2 {
+  font-size: 2rem; /* Taille du titre */
+  margin-bottom: 20px; /* Espacement sous le titre */
+  color: #0056b3; /* Couleur du titre */
+}
+
+.about-me p {
+  font-size: 1.2rem; /* Taille du texte */
+  line-height: 1.6; /* Hauteur de ligne pour améliorer la lisibilité */
+  color: #333; /* Couleur du texte */
+}
+
+.section-title {
+  color: #007bff; /* Blue color (or any other color you used for "À propos de moi") */
+  font-size: 2rem; /* Adjust the size as needed */
+  font-weight: bold; /* Adjust if needed */
+}

@@ -1,0 +1,33 @@
+.resume-download {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #0073b1; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    font-size: 16px; /* Taille de police */
+    border-radius: 5px; /* Coins arrondis */
+    text-decoration: none; /* Pas de soulignement */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transition douce */
+    position: relative; /* Pour le mouvement d'animation */
+}
+
+.resume-download:hover {
+    background-color: #005580; /* Couleur de fond au survol */
+    transform: scale(1.05); /* Agrandir légèrement le bouton */
+}
+
+.resume-download:active {
+    transform: scale(0.95); /* Rétrécir légèrement lorsque le bouton est cliqué */
+}
+
+/* Animation de mouvement pour attirer l'attention */
+@keyframes shake {
+    0% { transform: translate(0); }
+    25% { transform: translate(-5px, 0); }
+    50% { transform: translate(5px, 0); }
+    75% { transform: translate(-5px, 0); }
+    100% { transform: translate(0); }
+}
+
+.animate {
+    animation: shake 0.5s infinite; /* Animation infinie */
+}

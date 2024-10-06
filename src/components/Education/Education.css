@@ -1,0 +1,105 @@
+/* src/components/Education.css */
+
+/* Définir une animation d'entrée */
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .education {
+    margin-left: 150px;
+    background-color: #ffffff;
+    opacity: 0; /* Masquer la section par défaut */
+    transform: translateY(20px); /* Déplacer la section vers le bas par défaut */
+  }
+  
+  .education.fadeInUp {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .education-title {
+    font-size: 2rem;
+    margin-bottom: 40px; /* Ajusté pour correspondre à la hauteur du titre */
+    color: rgb(58, 97, 176);
+  }
+  
+  .education-container {
+    display: flex;
+    flex-direction: column; /* Dispose les éléments en colonne pour les séparer */
+  }
+  
+  .education-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px; /* Augmenter l'espacement entre les items */
+    border-radius: 8px; /* Coins arrondis pour chaque item */
+    background-color: #ffffff; /* Légèrement différent pour les items */
+    width: 100%; /* S'assurer que l'élément prend toute la largeur disponible */
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+  }
+  
+  .education-image {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .education-details {
+    flex: 1;
+  }
+  
+  .education-info {
+    margin-bottom: 10px;
+  }
+  
+  .education-date,
+  .education-location {
+    margin: 0;
+  }
+  
+  .education-description {
+    margin-top: 10px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .education-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: rgb(58, 97, 176);
+    position: relative;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .education-title::before,
+  .education-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    height: 3px;
+    background-color: rgb(58, 97, 176);
+  }
+  
+  .education-title::before {
+    left: -100px;
+    width: 80px; /* Longueur de la ligne gauche */
+  }
+  
+  .education-title::after {
+    right: -1190px;
+    width: 1150px; /* Longueur de la ligne droite, plus longue que la gauche */
+  }
+  

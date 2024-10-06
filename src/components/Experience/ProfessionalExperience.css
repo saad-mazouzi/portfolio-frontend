@@ -1,0 +1,94 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  
+  .professional-experience {
+    margin-left: 150px; /* Alignement à gauche de la section */
+    background-color: #ffffff;
+    opacity: 0; /* Masquer la section par défaut */
+    transform: translateY(20px); /* Déplacer la section vers le bas par défaut */
+  }
+  
+  .professional-experience.fadeInUp {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .experience-title {
+    font-size: 2rem;
+    margin-bottom: 40px; /* Ajusté pour correspondre à la hauteur du titre */
+    color: rgb(58, 97, 176);
+  }
+  
+  .experience-container {
+    display: flex;
+    flex-direction: column; /* Dispose les éléments en colonne pour les séparer */
+  }
+
+  
+  .company-logo {
+    width: 80px; /* Ajustez la taille selon vos préférences */
+    height: auto; /* Pour garder le ratio */
+    margin-right: 10px; /* Espacement à droite de l'icône */
+  }
+  
+  .experience-card {
+    display: flex;
+    align-items: center; /* Centre verticalement les éléments dans la carte */
+    justify-content: space-between; /* Aligne les éléments de manière égale */
+    margin-bottom: 40px; /* Augmenter l'espacement entre les items */
+    border-radius: 8px; /* Coins arrondis pour chaque item */
+    background-color: #ffffff; /* Légèrement différent pour les items */
+    width: calc(100% - 50px); /* Réduire la largeur pour laisser de l'espace à droite */
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+    padding-right: 20px; /* Ajoute un espacement à droite à l'intérieur de la carte */
+  }
+  
+  .video-container {
+    margin-left: 20px; /* Ajoute un espace à gauche de la vidéo */
+    display: flex;
+    align-items: center; /* Centre verticalement la vidéo dans son conteneur */
+    justify-content: center; /* Centre horizontalement la vidéo dans son conteneur */
+  }
+  
+  .project-video {
+    width: 500px; /* Ajustez la largeur de la vidéo selon vos besoins */
+    height: auto; /* Maintient le ratio de la vidéo */
+  }
+  .experience-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: rgb(58, 97, 176);
+    position: relative;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .experience-title::before,
+  .experience-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    height: 3px;
+    background-color: rgb(58, 97, 176);
+  }
+  
+  .experience-title::before {
+    left: -100px;
+    width: 80px; /* Longueur de la ligne gauche */
+  }
+  
+  .experience-title::after {
+    right: -890px;
+    width: 850px; /* Longueur de la ligne droite, plus longue que la gauche */
+  }
+  
