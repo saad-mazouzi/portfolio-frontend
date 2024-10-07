@@ -12,7 +12,7 @@ const ContactInfo = () => {
     useEffect(() => {
         const fetchContactInfo = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/api/contacts/'); // Remplacez par l'URL de votre API
+                const response = await axios.get('https://portfolio-backend-1-qp1v.onrender.com/api/contacts/'); // Remplacez par l'URL de votre API
                 setContactInfo(response.data[0]); // Supposons que la réponse soit un tableau
             } catch (error) {
                 console.error('Erreur lors de la récupération des informations de contact', error);

@@ -9,7 +9,7 @@ const CertificationCarousel = () => {
   useEffect(() => {
     const fetchCertifications = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/certifications/');
+        const response = await axios.get('https://portfolio-backend-1-qp1v.onrender.com/api/certifications/');
         setCertifications(response.data);
       } catch (error) {
         console.error('Erreur lors de la récupération des certifications:', error);

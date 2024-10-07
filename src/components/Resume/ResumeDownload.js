@@ -11,7 +11,7 @@ const ResumeDownload = () => {
         // Récupérer le CV depuis le backend
         const fetchResume = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/api/resume/');
+                const response = await axios.get('https://portfolio-backend-1-qp1v.onrender.com/api/resume/');
                 if (response.data.length > 0) {
                     setResumeUrl(response.data[0].file);
                 }

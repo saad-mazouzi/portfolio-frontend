@@ -12,7 +12,7 @@ const InterpersonalSkills = () => {
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/interperso');
+        const response = await axios.get('https://portfolio-backend-1-qp1v.onrender.com/api/interperso/');
         console.log(response.data);
         setSkills(response.data);
       } catch (err) {

@@ -1,8 +1,8 @@
 // src/components/AboutMe.js
 import React, { useState, useEffect } from 'react';
 import { useSpring, animated } from '@react-spring/web';
-import './AboutMe.css'; // Importez votre feuille de style personnalisée
-import axios from 'axios'; // Importez axios
+import './AboutMe.css'; 
+import axios from 'axios'; 
 
 const AboutMe = () => {
   // Déclarez les états pour stocker les données du backend
@@ -14,7 +14,7 @@ const AboutMe = () => {
   useEffect(() => {
     const fetchAboutMeData = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/aboutme/');
+        const response = await axios.get('https://portfolio-backend-1-qp1v.onrender.com/api/aboutme');
         if (response.data.length > 0) {
           setAboutMeData(response.data[0]);
         }
