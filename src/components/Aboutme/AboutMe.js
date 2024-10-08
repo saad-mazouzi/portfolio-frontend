@@ -1,16 +1,14 @@
-// src/components/AboutMe.js
 import React, { useState, useEffect } from 'react';
 import { useSpring, animated } from '@react-spring/web';
 import './AboutMe.css'; 
 import axios from 'axios'; 
+import { RingLoader } from 'react-spinners'; // Importez RingLoader
 
 const AboutMe = () => {
-  // Déclarez les états pour stocker les données du backend
-  const [aboutMeData, setAboutMeData] = useState(null); // Passez à null initialement
+  const [aboutMeData, setAboutMeData] = useState(null); 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Utilisez useEffect pour récupérer les données du backend
   useEffect(() => {
     const fetchAboutMeData = async () => {
       try {
@@ -32,26 +30,33 @@ const AboutMe = () => {
     opacity: 8,
     transform: 'translateX(0)',
     from: { opacity: 0, transform: 'translateX(-30px)' },
-    config: { duration: 3000 }, // Durée de l'animation en millisecondes
+    config: { duration: 3000 }, 
   });
 
-  // Affiche un message de chargement ou d'erreur
-  if (loading) return <p>Chargement en cours...</p>;
+  // Affiche le RingLoader en cas de chargement
+  if (loading) {
+    return (
+      <div className="loader-container">
+        <RingLoader color="#007bff" size={150} /> {/* Personnalisez la couleur et la taille */}
+      </div>
+    );
+  }
+
   if (error) return <p>{error}</p>;
-  if (!aboutMeData) return <p>Aucune donnée disponible.</p>; // Vérifiez si les données existent
+  if (!aboutMeData) return <p>Aucune donnée disponible.</p>;
 
   return (
     <section id="about" className="about-me">
       <div className="container d-flex align-items-center">
         <animated.img
-          src={aboutMeData.profile_picture} // Utilisez l'image récupérée depuis le backend
+          src={aboutMeData.profile_picture}
           alt="Mon image"
           className="about-me-image"
           style={fadeIn}
         />
         <animated.div className="about-me-text" style={fadeIn}>
           <h2>À propos de moi</h2>
-          <p>{aboutMeData.description}</p> {/* Utilisez la description récupérée */}
+          <p>{aboutMeData.description}</p>
         </animated.div>
       </div>
     </section>
